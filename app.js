@@ -66,7 +66,8 @@ app.use(categoryRoutes);
   //   const imageUrl = '/uploads/' + req.file.filename; // URL de l'image enregistrée
   //   res.status(200).json({ imageUrl: imageUrl }); // Renvoyer l'URL de l'image enregistrée en réponse
   // });
-  
+  app.get("/", (req, res) => res.send("Express on Vercel"));
+
 
   mongoose
     .connect(process.env.MONGODB_URI)
