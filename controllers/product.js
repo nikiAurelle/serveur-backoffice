@@ -7,10 +7,7 @@ const path = require('path');
 
 exports.getProducts = async (req,res,next) =>  {
 try {
-    const products = await Product.find();
-    console.log(products);
-
-
+    const products = await Product.find(); 
     if(!products)
     throw new Error();
 
